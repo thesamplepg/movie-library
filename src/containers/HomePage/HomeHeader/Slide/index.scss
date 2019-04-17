@@ -1,0 +1,40 @@
+.swiper-slide {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem;
+    padding-bottom: 9rem;
+    color: #fff;
+    font-size: 20px;
+    
+    &_movie-category {
+        font-weight: medium;
+        margin-bottom: 0.5rem;
+    }
+
+    &_movie-title {
+        margin-bottom: .5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    &_movie-information {
+        display: flex;
+        font-size: 0.9rem;
+
+        &_genre {
+            margin-right: 0.5rem;
+        }
+
+        &_movie-rating {
+            margin-left: .5rem;
+
+            svg {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

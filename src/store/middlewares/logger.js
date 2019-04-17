@@ -6,6 +6,7 @@ export default store => next => action => {
     }
     else {
         console.log('--[ DISPATCH ]--');
+        console.log(action);
     }
 
     return next(action);

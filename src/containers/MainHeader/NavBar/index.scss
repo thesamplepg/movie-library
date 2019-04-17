@@ -1,0 +1,15 @@
+.main-header_navbar {
+    grid-row: 1 span 1;
+    grid-column: 3 / 4;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+
+    &_item {
+        a {
+            color: #fff;
+            font-size: 2rem;
+        }
+    }
+}

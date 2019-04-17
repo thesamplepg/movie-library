@@ -1,0 +1,10 @@
+.home-header-container {
+    overflow: hidden;
+    background-color: var(--color-dark);
+
+    .swiper-wrapper {
+        display: flex;
+        width: 300vw;
+        height: calc(100vh - var(--offset-top));
+    }
+}

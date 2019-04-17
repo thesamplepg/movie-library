@@ -1,0 +1,34 @@
+.main-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 80px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--color-dark);
+
+    .main-header_brand {
+        grid-row: 1 span 1;
+        grid-column: 1 span 1;
+
+        &_container {
+            width: 45px;
+            height: 45px;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            a {
+                height: 50px;
+    
+                img {
+                    width: 50px;
+                }
+            }
+        }
+    }
+
+}
