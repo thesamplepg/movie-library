@@ -1,50 +1,48 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-import { getPlayingMovies } from '../../store/actions/movies';
+import { getMovies } from '../../store/actions/movies';
 import { hideLoader } from '../../store/actions/app';
-import MainHeader from '../../containers/MainHeader/index';
-import HomeHeader from './HomeHeader';
+
+import './index.scss';
+import MainNavbar from '../MainNavbar';
+import Header from './Header';
 
 class HomePage extends Component {
 
     async componentDidMount() {
-        await this.props.getPlayingMovies();
-        
+        await this.props.getMovies();
+
         this.props.hideLoader();
     }
     
 
     render() {
-
         let output = null;
 
-        if(!this.props.loader) {
+        if(!this.props.loading) {
+
             output = (
-                <React.Fragment>
-                    <MainHeader />
-                    <HomeHeader 
+
+                <div className="home-page">
+                    <MainNavbar />
+                    <Header 
                         configuration={this.props.configuration}
                         genres={this.props.genres}
-                        movies={this.props.nowPlayingMovies.slice(0, 3)}
+                        movies={this.props.playingMovies.slice(0, 3)}
                     />
-                </React.Fragment>
-            )
-        } 
+                </div>
+
+            );
+
+        }
 
         return output;
     }
 }
 
-const dispatches = {
-    getPlayingMovies, hideLoader
-}
-
 export default connect( state => ({
-
-    configuration: state.app.configuration,
+    loading: !state.app.hideLoader,
+    playingMovies: state.movies.nowPlaying,
     genres: state.app.genres,
-    loader: !state.app.hideLoader,
-    nowPlayingMovies: state.movies.nowPlaying
-    
-}), dispatches )(HomePage);
+    configuration: state.app.configuration
+}), { getMovies, hideLoader } )(HomePage);

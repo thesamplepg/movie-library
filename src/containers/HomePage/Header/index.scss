@@ -1,0 +1,10 @@
+.home-header {
+    height: 100vh;
+    padding-top: var(--offset-top);
+    overflow: hidden;
+
+    .swiper-wrapper {
+        height: 100%;
+        display: flex;
+    }
+}

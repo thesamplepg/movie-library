@@ -5,15 +5,15 @@ import { faHome, faCompass } from '@fortawesome/free-solid-svg-icons';
 import './index.scss';
 import Icon from '../../../components/Icon';
 
-const NavBar = () => {
+const Items = () => {
     return (
-        <ul className="main-header_navbar">
-            <li className="main-header_navbar_item">
+        <ul className="main-navbar_navbar">
+            <li className="main-navbar_navbar_item">
                 <Link to="/">
                     <Icon icon={ faHome }/>
                 </Link>
             </li>
-            <li className="main-header_navbar_item">
+            <li className="main-navbar_navbar_item">
                 <Link to="/discover">
                     <Icon icon={ faCompass }/>
                 </Link>
@@ -22,4 +22,4 @@ const NavBar = () => {
     );
 }
 
-export default NavBar;
+export default Items;

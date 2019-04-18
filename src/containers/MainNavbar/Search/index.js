@@ -16,14 +16,14 @@ class Search extends Component {
 
     render() {
         return (
-            <form className="main-header_search">
+            <form className="main-navbar_search">
                 <input 
                     type="text" 
                     placeholder="Search movie" 
                     value={this.state.value}
                     onChange={this.inputHandler}
                 /> 
-                <button type="submit" className="main-header_search_submit-button">
+                <button type="submit" className="main-navbar_search_submit-button">
                     <Icon icon={ faSearch } />
                 </button>  
             </form>

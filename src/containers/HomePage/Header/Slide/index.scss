@@ -1,0 +1,32 @@
+.home-header {
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+        padding: 3rem;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        color: #fff;
+        line-height: 2rem;
+        text-decoration: none;
+
+        .movie-category {
+            font-size: 1.2rem;
+        }
+
+        .movie-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .movie-information {
+            display: flex;
+
+            &_rating {
+                margin-left: 0.3rem;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 export const GET_CONFIGURATION = 'GET_CONFIGURATION';
 export const GET_GENRES = 'GET_GENRES';
 
-export const GET_NOW_PLAYING_MOVIES = 'GET_NOW_PLAYING_MOVIES';
+export const GET_MOVIES = 'GET_MOVIES';
 
 export const SHOW_LOADER = 'SHOW_LOADER';
 export const HIDE_LOADER = 'HIDE_LOADER';

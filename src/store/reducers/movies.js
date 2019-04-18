@@ -1,18 +1,26 @@
-import * as actionType from '../actions/index';
+import * as actionTypes from '../actions/index';
 
 const initalState = {
-    nowPlaying: null
+    nowPlaying: null,
+    upcoming: null,
+    topRated: null,
+    popular: null
 }
 
 export default (state = initalState, action) => {
 
     switch ( action.type ) {
-        case actionType.GET_NOW_PLAYING_MOVIES + '_TRUE':
+
+        case actionTypes.GET_MOVIES + '_TRUE':
+            
+            const { now_playing, top_rated, popular, upcoming } = action.payload;
+        
             return {
                 ...state,
-                nowPlaying: action.payload.data.results
+                nowPlaying: now_playing,
+                topRated: top_rated,
+                popular, upcoming
             }
-
         
         default: return state;
     }
