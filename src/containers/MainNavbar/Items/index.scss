@@ -12,4 +12,19 @@
             font-size: 2rem;
         }
     }
+
+    @media screen and (max-width: 800px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        justify-content: center;
+        background-color: var(--color-dark);
+        padding: 1rem 0;
+        grid-area: unset;
+
+        &_item {
+            margin: 0 1rem;
+        }
+    }
+    
 }

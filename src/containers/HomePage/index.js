@@ -20,7 +20,6 @@ class HomePage extends PureComponent {
     async componentDidMount() {
         await this.props.getMovies();
 
-        window.addEventListener('resize', this.resizeHandler);
         this.adaptiveHandler();
 
         this.props.hideLoader();
@@ -29,7 +28,7 @@ class HomePage extends PureComponent {
     adaptiveHandler = () => {
         const width = window.innerWidth;
 
-        if(width < 380) this.setState({slides: 3});
+        if(width < 380) this.setState({slides: 3}); 
         else if(width < 875) this.setState({slides: 4});
         else if(width < 1000) this.setState({slides: 5});
         else if(width < 1200) this.setState({slides: 6});
@@ -65,7 +64,6 @@ class HomePage extends PureComponent {
     
 
     render() {
-
 
         new Swiper('.items-carousel', {
             slidesPerView: this.state.slides,

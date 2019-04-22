@@ -27,4 +27,12 @@
         right: 0;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 800px){
+        width: 100%;
+
+        input[type=text] {
+           width: 100%;
+        }
+    }
 }
