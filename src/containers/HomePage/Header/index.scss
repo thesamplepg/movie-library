@@ -7,4 +7,12 @@
         height: 100%;
         display: flex;
     }
+
+    @media screen and (max-width: 900px) {
+        height: 500px;
+    }
+
+    @media screen and (max-width: 620px) {
+        height: 300px;
+    }
 }

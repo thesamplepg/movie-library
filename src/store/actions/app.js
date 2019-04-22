@@ -15,6 +15,12 @@ export const getGenres = () => dispatch => {
     return getData(url, actionTypes.GET_GENRES, dispatch);
 }
 
+export const switcher = (type) => dispatch => {
+    type === 'movies' ? 
+    dispatch({ type: actionTypes.SWITCH + '_MOVIES'}) : 
+    dispatch({ type: actionTypes.SWITCH + '_TVS'})
+}
+
 export const showLoader = () => ({ type: actionTypes.SHOW_LOADER });
 
 export const hideLoader = () => dispatch => {

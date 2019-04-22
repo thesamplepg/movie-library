@@ -1,0 +1,40 @@
+.home-page {
+    .home-page_switcher {
+        display: flex;
+        color: #fff;
+        margin-top: 3rem;
+        justify-content: center;
+
+        .switcher {
+            cursor: pointer;
+            width: 300px;
+            padding: 0.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1rem;
+            position: relative;
+            border-radius: 5px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, var(--color-pink) 1%, #2E1E6D 80%);
+
+            span {
+                text-align: center;
+                font-weight: bold;
+                display: block;
+                background-color: var(--color-purple);
+                width: 100%;
+                padding: 0.9rem 0;
+            }
+        }
+    }
+
+    .home-page_content {
+        padding: 4rem;
+        margin: 0 auto;
+
+        @media screen and (max-width: 500px) {
+            padding: 1.5rem;
+        }
+    }
+}

@@ -15,7 +15,7 @@ const Header = (props) => {
         keyboard: true
     });
 
-    const slides = props.movies.map((movie, index) => {
+    const slides = props.content.map((movie, index) => {
         return <Slide 
             key={ index }
             {...movie}

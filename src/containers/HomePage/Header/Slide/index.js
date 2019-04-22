@@ -18,6 +18,7 @@ const Slide = (props) => {
             linear-gradient(rgba(0, 0, 0, .6), rgba( 0, 0, 0, .6)),
             url('${imageUrl}')
         `,
+        backgroundRepeat: 'no repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center 20%'
     }
@@ -25,10 +26,10 @@ const Slide = (props) => {
     return (
         <Link to={`/movie/${props.id}`} className="swiper-slide" style={styles}>
             <div className="movie-category">
-                NOW PLAYING
+                {props.original_title ? 'NOW PLAYING' : 'ON THE AIR'}
             </div>
             <div className="movie-title">
-                {props.original_title}
+                {props.original_title ? props.original_title : props.original_name}
             </div>
             <div className="movie-information">
                 <div className="movie-information_genre">

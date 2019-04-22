@@ -29,6 +29,10 @@ export default (state = initalState, action) => {
 
         case actionType.CLOSE_LOADER: return { ...state, loader: false }
 
+        case actionType.SWITCH + '_MOVIES': return { ...state, isTypeMovies: true }
+
+        case actionType.SWITCH + '_TVS': return { ...state, isTypeMovies: false }
+
         
         default: return state;
     }

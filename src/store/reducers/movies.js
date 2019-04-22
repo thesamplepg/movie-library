@@ -1,10 +1,10 @@
 import * as actionTypes from '../actions/index';
 
 const initalState = {
-    nowPlaying: null,
     upcoming: null,
-    topRated: null,
-    popular: null
+    popular: null,
+    nowPlaying: null,
+    topRated: null
 }
 
 export default (state = initalState, action) => {
