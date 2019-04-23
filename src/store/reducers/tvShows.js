@@ -5,12 +5,15 @@ const initalState = {
     popular: null,
     onTheAir: null,
     topRated: null,
-    received: false
+    received: false,
+    loading: false
 }
 
 export default (state = initalState, action) => {
 
     switch ( action.type ) {
+
+        case actionTypes.GET_TV_SHOWS: return { ...state, loading: true };
 
         case actionTypes.GET_TV_SHOWS + '_TRUE':
             
@@ -22,7 +25,8 @@ export default (state = initalState, action) => {
                 airingToday: airing_today,
                 topRated: top_rated,
                 onTheAir: on_the_air,
-                received: true
+                received: true,
+                loading: false
             }
         
         default: return state;

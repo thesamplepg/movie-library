@@ -2,10 +2,11 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { getMovies } from '../../store/actions/movies';
 import { getTvShows } from '../../store/actions/tvShows';
-import { hideLoader, showLoader, switcher } from '../../store/actions/app';
+import { switcher } from '../../store/actions/app';
 import Swiper from 'swiper';
 
 import './index.scss';
+import Loader from '../../components/Loader';
 import MainNavbar from '../MainNavbar';
 import Header from './Header';
 import Movies from './Movies';
@@ -17,65 +18,47 @@ class HomePage extends PureComponent {
         slides: 7
     }
 
-    async componentDidMount() {
-        await this.props.getMovies();
-
-        this.adaptiveHandler();
-
-        this.props.hideLoader();
+    componentWillMount() {
+        this.props.getMovies();
     }
 
-    adaptiveHandler = () => {
-        const width = window.innerWidth;
-
-        if(width < 380) this.setState({slides: 3}); 
-        else if(width < 875) this.setState({slides: 4});
-        else if(width < 1000) this.setState({slides: 5});
-        else if(width < 1200) this.setState({slides: 6});
-    }
-
-    switchToTvs = () => {
-        this.props.showLoader();
-        
+    switchToTvs = async() => {
         if(!this.props.received) {
-            this.props.getTvShows()
-                .then(() => {
-                    this.props.hideLoader();
-                });
-        } else {
-            setTimeout(() => {   
-                this.props.hideLoader();
-            }, 1000);
-        }
+            this.props.getTvShows();
+        } 
 
         this.props.switcher('tvs');
     }
 
     switchToMovies = async() => {
         if(!this.props.isTypeMovies) {
-            this.props.showLoader();
             this.props.switcher('movies');
-            
-            setTimeout(() => {
-                this.props.hideLoader();
-            }, 1000);
         }
     }
     
 
-    render() {
+    componentDidUpdate() {
+        if(!this.props.loading) {
+            new Swiper('.items-carousel', {
+                slidesPerView: 7,
+                loop: true,
+                breakpoints: {
+                    1200: { slidesPerView: 6 },
+                    1000: { slidesPerView: 5 },
+                    875: { slidesPerView: 4 },
+                    385: { slidesPerView: 3 }
+                }
+            });
+        }
+    }
 
-        new Swiper('.items-carousel', {
-            slidesPerView: this.state.slides,
-            loop: true
-        });
+    render() {
 
         let output = null;
 
-        if(!this.props.loading) {
+        if(this.props.isTypeMovies ? !this.props.movieLoading : !this.props.tvLoading) {
 
             output = (
-
                 <div className="home-page">
                     <MainNavbar />
                     <Header 
@@ -108,20 +91,26 @@ class HomePage extends PureComponent {
 
         }
 
-        return output;
+        return (
+            <React.Fragment>
+                <Loader 
+                    loading={this.props.isTypeMovies ? this.props.movieLoading : this.props.tvLoading}
+                />
+                { output }
+            </React.Fragment>
+        )
     }
 }
 
 const dispaths = {
     getMovies, 
     getTvShows, 
-    hideLoader, 
-    showLoader,
     switcher
 }
 
 export default connect( state => ({
-    loading: !state.app.hideLoader,
+    movieLoading: state.movies.loading,
+    tvLoading: state.tvShows.loading,
     playingMovies: state.movies.nowPlaying,
     onAirTvShows: state.tvShows.onTheAir,
     genres: state.app.genres,

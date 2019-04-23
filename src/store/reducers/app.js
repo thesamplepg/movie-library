@@ -3,9 +3,7 @@ import * as actionType from '../actions/index';
 const initalState = {
     isTypeMovies: true,
     configuration: null,
-    genres: null,
-    loader: true,
-    hideLoader: false,
+    genres: null
 }
 
 export default (state = initalState, action) => {
@@ -22,12 +20,6 @@ export default (state = initalState, action) => {
                 ...state,
                 genres: action.payload.data.genres
             }
-
-        case actionType.SHOW_LOADER: return { ...state, loader: true, hideLoader: false }
-
-        case actionType.HIDE_LOADER: return { ...state, hideLoader: true }
-
-        case actionType.CLOSE_LOADER: return { ...state, loader: false }
 
         case actionType.SWITCH + '_MOVIES': return { ...state, isTypeMovies: true }
 

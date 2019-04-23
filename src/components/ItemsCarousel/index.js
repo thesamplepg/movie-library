@@ -24,6 +24,8 @@ const ItemsCarousel = ({items, category, baseUrl, genres}) => {
                                 {...item}
                             />
                         }
+
+                        return null;
                     })
                 }
             </div>

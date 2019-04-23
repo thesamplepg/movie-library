@@ -6,13 +6,15 @@ import Slide from './Slide';
 
 const Header = (props) => {
 
-    new Swiper('.home-header', {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: {
-            delay: 5000
-        },
-        keyboard: true
+    React.useEffect(() => {
+        new Swiper('.home-header', {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 5000
+            },
+            keyboard: true
+        });
     });
 
     const slides = props.content.map((movie, index) => {

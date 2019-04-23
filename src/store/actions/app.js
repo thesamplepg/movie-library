@@ -20,13 +20,3 @@ export const switcher = (type) => dispatch => {
     dispatch({ type: actionTypes.SWITCH + '_MOVIES'}) : 
     dispatch({ type: actionTypes.SWITCH + '_TVS'})
 }
-
-export const showLoader = () => ({ type: actionTypes.SHOW_LOADER });
-
-export const hideLoader = () => dispatch => {
-
-    dispatch({type: actionTypes.HIDE_LOADER});
-
-    setTimeout(() => dispatch({ type: actionTypes.CLOSE_LOADER }), 500);
-
-};

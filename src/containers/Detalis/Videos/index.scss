@@ -1,0 +1,26 @@
+.detalis {
+    .videos-carousel {
+        overflow: hidden;
+
+        .swiper-wrapper {
+            display: flex;
+            
+            .no-videos {
+                width: 100%;
+                font-size: 1;
+                text-align: center;
+                color: #fff;
+                font-weight: bold;
+                font-family: var(--font-alegraya);
+                background-color: var(--color-pink);
+                padding: 2rem;
+            }
+
+            .swiper-slide {
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

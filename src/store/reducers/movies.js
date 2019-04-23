@@ -4,12 +4,15 @@ const initalState = {
     upcoming: null,
     popular: null,
     nowPlaying: null,
-    topRated: null
+    topRated: null,
+    loading: true
 }
 
 export default (state = initalState, action) => {
 
     switch ( action.type ) {
+
+        case actionTypes.GET_MOVIES: return { ...state, loading: true }
 
         case actionTypes.GET_MOVIES + '_TRUE':
             
@@ -19,7 +22,8 @@ export default (state = initalState, action) => {
                 ...state,
                 nowPlaying: now_playing,
                 topRated: top_rated,
-                popular, upcoming
+                popular, upcoming,
+                loading: false
             }
         
         default: return state;

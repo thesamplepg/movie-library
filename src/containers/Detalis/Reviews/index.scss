@@ -1,0 +1,45 @@
+.reviews {
+    &_not-found {
+        color: #fff;
+        padding: 2rem;
+        background-color: var(--color-dark);
+        text-align: center;
+        font-weight: bold;
+        font-family: var(--font-alegraya);
+    }
+
+    .review {
+        background-color: var(--color-dark);
+        color: #fff;
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+
+        &_author {
+            font-size: 2rem;
+            font-family: var(--font-alegraya);
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+        }
+
+        &_content {
+            background-color: rgba(255, 255, 255, 0.137);
+            padding: 2rem;
+            font-weight: medium;
+            color: rgba(255, 255, 255, 0.74);
+        }
+
+        &_full {
+            padding: 2rem;
+
+            a {
+                text-decoration: none;
+                color: var(--color-pink);
+                font-weight: bold;
+
+                &:active {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}

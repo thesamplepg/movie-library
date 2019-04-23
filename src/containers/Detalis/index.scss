@@ -1,0 +1,110 @@
+.detalis {
+
+    h2 {
+        letter-spacing: 5px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        color: #fff;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .detalis_header {
+        height: 100vh;
+        position: relative;
+        
+        svg {
+            cursor: pointer;
+            color: var(--color-pink);
+            font-size: 4em;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+        }
+    }
+
+    &_main {
+        position: relative;
+        z-index: 3;
+        width: 1024px;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+
+        &_information {
+            display: flex;
+            align-items: center;
+            margin-top: -5rem;
+            color: #fff;
+            line-height: 2em;
+
+            img {
+                border-radius: 10px;
+                margin-right: 1rem;
+            }
+
+            .info-detalis {
+                font-family: var(--font-alegraya);
+
+                &_title {
+                    font-weight: bold;
+                    font-size: 2em;
+                    font-family: var(--font-regular);
+                }
+
+                &_rating {
+                    font-size: 1.5em;
+                    margin-top: 1rem;
+                    display: flex;
+                    align-items: center;
+                    
+
+                    svg {
+                        margin-right: 10px;
+                        color: var(--color-pink)
+                    }
+                }
+            }
+        }
+
+        &_overview {
+            margin-top: 5rem;
+            padding: 2rem;
+            color: var(--color-purple);
+            font-weight: medium;
+            font-size: 1.1rem;
+            font-family: var(--font-alegraya);
+            background-color: #ccc;
+        }
+
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+            padding: 0 1rem;
+
+            &_information {
+                padding: 0 2em;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            &_information {
+                img {
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .detalis_header {
+            height: 500px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        font-size: 0.7rem;
+        
+        .detalis_header {
+            height: 300px;
+        }
+    }
+}

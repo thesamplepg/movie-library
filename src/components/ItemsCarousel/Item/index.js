@@ -6,8 +6,10 @@ import Icon from '../../Icon';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Item = (props) => {
+    const type = props.original_title ? 'movie' : 'tv'
+
     return (
-        <Link className="swiper-slide" to={`/movie/${props.id}`}>
+        <Link className="swiper-slide" to={`detalis/${type}/${props.id}`}>
             <img src={props.baseUrl + props.poster_path} alt="poster" />
             <div className="item-rating">
                 <Icon icon={ faStar } />

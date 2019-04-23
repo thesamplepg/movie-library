@@ -1,14 +1,17 @@
 import React from 'react';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import './index.scss';
+import Icon from '../Icon';
 
-const Loader = ({ isHide }) => {
+const Loader = ({ loading }) => {
+    const classes = ['full-screen_loader', !loading ? 'hide' : '']
+
     return (
-        <div className={['full-screen_loader', isHide ? 'full-screen_loader--hide' : ''].join(' ')}>
-            <div className="pulsor">
-                <div></div>
-                <div></div>
-            </div>
+        <div 
+            className={classes.join(' ')}
+        >
+            <Icon icon={ faSpinner } />
         </div>
     );
 }

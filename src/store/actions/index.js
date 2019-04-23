@@ -10,3 +10,5 @@ export const SWITCH = 'SWITCH';
 export const SHOW_LOADER = 'SHOW_LOADER';
 export const HIDE_LOADER = 'HIDE_LOADER';
 export const CLOSE_LOADER = 'CLOSE_LOADER'
+
+export const GET_DETALIS = 'GET_DETALIS';
