@@ -3,8 +3,6 @@ import React from 'react';
 import './index.scss';
 
 const Reviews = ({reviews}) => {
-    console.log(reviews);
-
     return (
         <div className="reviews">
             <h2>Reviews</h2>

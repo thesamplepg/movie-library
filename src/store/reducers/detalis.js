@@ -15,8 +15,6 @@ export default (state = initalState, action) => {
         case actionTypes.GET_DETALIS: return { ...state, loading: true }
 
         case actionTypes.GET_DETALIS + '_TRUE':
-            console.log(action.payload);
-
             return {
                 ...state, 
                 detalis: action.payload.detalis,
