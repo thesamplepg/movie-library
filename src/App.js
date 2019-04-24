@@ -29,7 +29,6 @@ class App extends Component {
             <Route path="*" component={HomePage}/>
           </Switch>
         </main>
-        
         <Footer />
       </div>
     );
