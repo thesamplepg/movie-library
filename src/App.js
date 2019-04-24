@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './App.scss';
@@ -8,6 +8,7 @@ import { getConfiguration, getGenres } from './store/actions/app';
 import Detalis from './containers/Detalis';
 import SearchResults from './containers/SearchResults';
 import Loader from './components/Loader';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -21,11 +22,15 @@ class App extends Component {
       <div className="App">
         <main className="main">
           <Loader loading={this.props.searchLoading}/>
-          <Route exact path="/" component={HomePage}/>
-          <Route path="/detalis/:type/:id" component={Detalis}/>
-          <Route path="/search/:query" component={SearchResults}/>
-          <Route component={HomePage}/>
+          <Switch>
+            <Route exact path="/" component={HomePage}/>
+            <Route path="/detalis/:type/:id" component={Detalis}/>
+            <Route path="/search/:query" component={SearchResults}/>
+            <Route path="*" component={HomePage}/>
+          </Switch>
         </main>
+        
+        <Footer />
       </div>
     );
   }
