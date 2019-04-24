@@ -24,7 +24,7 @@ const Slide = (props) => {
     }
 
     return (
-        <Link to={`/movie/${props.id}`} className="swiper-slide" style={styles}>
+        <Link to={`/detalis/${props.type}/${props.id}`} className="swiper-slide" style={styles}>
             <div className="movie-category">
                 {props.original_title ? 'NOW PLAYING' : 'ON THE AIR'}
             </div>

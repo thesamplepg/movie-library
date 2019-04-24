@@ -65,7 +65,7 @@ class Detalis extends Component {
                                     { detalis.status } | { detalis.original_language }
                                 </div>
                                 <div className="info-detalis_genres">
-                                    {firstGenre.name} / {secondGengre.name}
+                                    {firstGenre ? firstGenre.name : null} / {secondGengre ? secondGengre.name : null}
                                 </div>
                             </div>
                         </div>

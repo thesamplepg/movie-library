@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
 import './index.scss';
-import Items from './Items';
 import Search from './Search';
 
 class MainNavbar extends Component {
@@ -18,7 +17,6 @@ class MainNavbar extends Component {
                     </div>
                 </div> 
                 <Search />
-                <Items />
             </div>
         );
     }

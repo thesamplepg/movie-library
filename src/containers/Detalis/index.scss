@@ -1,5 +1,7 @@
 .detalis {
 
+    padding-bottom: 5rem;
+
     h2 {
         letter-spacing: 5px;
         margin-top: 3rem;
@@ -28,7 +30,6 @@
         z-index: 3;
         width: 1024px;
         margin: 0 auto;
-        padding-bottom: 5rem;
 
         &_information {
             display: flex;

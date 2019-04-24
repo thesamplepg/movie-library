@@ -5,6 +5,7 @@ import './index.scss';
 import Icon from '../Icon';
 
 const Loader = ({ loading }) => {
+    
     const classes = ['full-screen_loader', !loading ? 'hide' : '']
 
     return (

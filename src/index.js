@@ -7,8 +7,6 @@ import './index.scss';
 import App from './App';
 import store from './store';
 
-window.store = store;// just for some tests
-
 const app = (
     <BrowserRouter>
         <Provider store={store}>

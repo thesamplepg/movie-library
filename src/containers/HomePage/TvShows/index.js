@@ -8,9 +8,7 @@ const TvShows = ({ tvShows, configuration, genres }) => {
     const categories = ['airing today', 'popular', 'on the air', 'top rated'];
     const tvKeys = Object.keys(tvShows);
 
-    const width = window.innerWidth < 725 ? 0 : 1;
-
-    const baseUrl = configuration.images.base_url + configuration.images.poster_sizes[width];
+    const baseUrl = configuration.images.base_url + configuration.images.poster_sizes[1];
 
     return (    
         <React.Fragment>

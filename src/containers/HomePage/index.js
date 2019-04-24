@@ -64,6 +64,7 @@ class HomePage extends PureComponent {
                     <Header 
                         configuration={this.props.configuration}
                         genres={this.props.genres}
+                        isTypeMovies={this.props.isTypeMovies}
                         content={
                             this.props.isTypeMovies ? 
                             this.props.playingMovies.slice(0, 3) :

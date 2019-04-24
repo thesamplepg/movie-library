@@ -23,6 +23,7 @@ const Header = (props) => {
             {...movie}
             configuration={props.configuration}
             genres={props.genres}
+            type={props.isTypeMovies ? 'movie' : 'tv'}
         />
     });
 
