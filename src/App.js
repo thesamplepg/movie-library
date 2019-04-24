@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { WOW } from 'wowjs';
 import { connect } from 'react-redux';
 
 import './App.scss';
@@ -11,17 +10,10 @@ import SearchResults from './containers/SearchResults';
 import Loader from './components/Loader';
 
 class App extends Component {
-  
-  
+
   componentWillMount() {
     this.props.getConfiguration();
     this.props.getGenres();
-  }
-  
-
-  componentDidMount() {
-    const wow = new WOW();
-    wow.init();
   }
 
   render() {
