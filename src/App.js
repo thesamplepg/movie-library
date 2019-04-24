@@ -24,6 +24,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage}/>
           <Route path="/detalis/:type/:id" component={Detalis}/>
           <Route path="/search/:query" component={SearchResults}/>
+          <Route component={HomePage}/>
         </main>
       </div>
     );
