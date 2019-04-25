@@ -30,28 +30,11 @@
                     width: 50px;
                 }
             }
-
-            @media screen and(max-width: 620px) {
-                margin-right: 1rem;
-
-                a {
-                    height: 35px;
-                    
-                    img {
-                        width: 35px;
-                    }
-                }
-            }
         }
     }
 
     @media screen and (max-width: 800px){
         grid-template-columns: 80px 1fr;
-    }
-
-    @media screen and(max-width: 620px) {
-        grid-template-rows: 50px;
-        grid-template-columns: 40px 1fr;
     }
 
 }

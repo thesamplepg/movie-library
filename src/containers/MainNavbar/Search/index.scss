@@ -9,21 +9,20 @@
 
     input[type=text] {
         width: 100%;
-        padding: 0.8em;
-        padding-right: 3em;
+        padding: 0.8rem;
+        padding-right: 3rem;
         border-radius: 50px;
         outline: none;
         border: none;
         font-weight: bold;
-        font-size: 1em;
         font-family: var(--font-alegraya);
-        margin-right: 5px;
     }
 
     &_submit-button {
         width: 50px;
         height: 100%;
         color: #fff;
+        padding: 0.8rem;
         border-radius: 50px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -31,7 +30,7 @@
         outline: none;
         background-color: var(--color-pink);
         position: absolute;
-        right: -1px;
+        right: 0;
         cursor: pointer;
     }
 
@@ -41,9 +40,5 @@
         input[type=text] {
            width: 100%;
         }
-    }
-
-    @media screen and (max-width: 620px) {
-        font-size: 10px;
     }
 }
