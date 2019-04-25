@@ -17,6 +17,7 @@
         font-weight: bold;
         font-size: 1em;
         font-family: var(--font-alegraya);
+        margin-right: 5px;
     }
 
     &_submit-button {
@@ -30,7 +31,7 @@
         outline: none;
         background-color: var(--color-pink);
         position: absolute;
-        right: 0;
+        right: -1px;
         cursor: pointer;
     }
 
