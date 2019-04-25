@@ -52,7 +52,7 @@ class SearchResults extends Component {
                         switchSearchType={this.switchSearchType}
                         type={this.props.searchType}
                     />
-                    <div className="search-results_list">
+                    <ul className="search-results_list">
                         {
                             this.props.results.length > 0 ?
                             this.props.results.map((content, index) => {
@@ -72,7 +72,7 @@ class SearchResults extends Component {
                             }) :
                             <div className="search-results_not-found">no results found</div>
                         }
-                    </div>
+                    </ul>
                 </div>
             );
         }

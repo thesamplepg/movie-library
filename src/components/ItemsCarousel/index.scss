@@ -4,7 +4,7 @@
     overflow: hidden;
 
     &::after {
-        margin-top: 4rem;
+        margin-top: 1rem;
         display: block;
         width: 100%;
         height: 1px;
@@ -24,5 +24,11 @@
 
     .swiper-wrapper {
         display: flex;
+    }
+
+    @media screen and (max-width: 620px) {
+        &::after {
+            margin-top: .5rem;
+        }
     }
 }

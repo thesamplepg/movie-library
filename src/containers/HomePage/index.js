@@ -77,12 +77,12 @@ class HomePage extends PureComponent {
                         }
                     />
                     <div className="home-page_switcher">
-                        <div className="switcher" onClick={this.switchToMovies}>
+                        <button className="switcher" onClick={this.switchToMovies}>
                             <span>movies</span>
-                        </div>
-                        <div className="switcher" onClick={this.switchToTvs}>
+                        </button>
+                        <button className="switcher" onClick={this.switchToTvs}>
                             <span>tv shows</span>
-                        </div>
+                        </button>
                     </div>
                     <div className="home-page_content">
                         {

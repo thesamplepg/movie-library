@@ -8,7 +8,7 @@ import Search from './Search';
 class MainNavbar extends Component {
     render() {
         return (
-            <div className="main-navbar">
+            <nav className="main-navbar">
                 <div className="main-navbar_brand">
                     <div className="main-navbar_brand_container">
                         <NavLink to="/">
@@ -17,7 +17,7 @@ class MainNavbar extends Component {
                     </div>
                 </div> 
                 <Search />
-            </div>
+            </nav>
         );
     }
 }

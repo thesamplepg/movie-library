@@ -7,9 +7,9 @@ import { getGenres } from '../../utilits';
 const ItemsCarousel = ({items, category, baseUrl, genres}) => {
     
     return (
-        <div className="items-carousel">
+        <section className="items-carousel">
             <h2>{ category }</h2>
-            <div className="swiper-wrapper">
+            <ul className="swiper-wrapper">
                 {
                     items.map((item, index) => {
                         if(item.backdrop_path) {
@@ -28,8 +28,8 @@ const ItemsCarousel = ({items, category, baseUrl, genres}) => {
                         return null;
                     })
                 }
-            </div>
-        </div>
+            </ul>
+        </section>
     );
 }
 
