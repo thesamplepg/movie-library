@@ -28,7 +28,7 @@ export const getDetalis = (type, id) => async dispatch => {
             .then(res => {
                 data[option] = res;
 
-                if(index === options.length - 1) {
+                if(Object.keys(data).length === options.length + 1) {
                     dispatch({
                         type: actionTypes.GET_DETALIS + '_TRUE',
                         payload: data
