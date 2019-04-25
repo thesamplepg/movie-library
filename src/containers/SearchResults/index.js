@@ -16,7 +16,7 @@ import { getGenres } from '../../utilits';
 
 class SearchResults extends Component {
 
-    componentWillMount() {
+    componentDidMount() {
         if(!this.props.query) {
             const query = this.props.location.pathname.split('/')[2];
             this.props.inputQuery(query);
@@ -32,6 +32,11 @@ class SearchResults extends Component {
             this.props.search();
         }
     }
+
+    switchSearchType = () => {
+        this.props.switchSearchType();
+        this.props.search();
+    }
     
 
     render() {
@@ -44,7 +49,7 @@ class SearchResults extends Component {
                 <div className="search-results">
                     <h2>search results for "{this.props.query}"</h2>
                     <TypeSwitcher 
-                        switchSearchType={this.props.switchSearchType}
+                        switchSearchType={this.switchSearchType}
                         type={this.props.searchType}
                     />
                     <div className="search-results_list">

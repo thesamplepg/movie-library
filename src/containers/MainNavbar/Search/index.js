@@ -20,9 +20,10 @@ class Search extends Component {
     submitHandler = (e) => {
         e.preventDefault();
 
-        if(this.state.value.length > 0) 
+        if(this.state.value.length > 0) {
             this.props.history.push(`/search/${this.state.value}`);
             this.props.inputQuery(this.state.value);
+        }
     }
 
     render() {
