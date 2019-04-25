@@ -20,7 +20,7 @@ export default (state = initalState, action) => {
                 ...state, 
                 detalis: action.payload.detalis,
                 casts: action.payload.credits.cast,
-                videos: action.payload.videos.results,
+                videos: action.payload.videos.results.slice(0, 6),
                 reviews: action.payload.reviews.results,
                 loading: false
             }
