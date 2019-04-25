@@ -2,7 +2,7 @@
 
 React application to browse your favorite Movies and TV shows.
 
-[MovieLibrary](https://npmjs.com)
+[MovieLibrary](https://movielibrary.netlify.com/search/asd)
 
 ## Instalation
 
