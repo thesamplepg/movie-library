@@ -9,12 +9,13 @@
 
     input[type=text] {
         width: 100%;
-        padding: 0.8rem;
-        padding-right: 3rem;
+        padding: 0.8em;
+        padding-right: 3em;
         border-radius: 50px;
         outline: none;
         border: none;
         font-weight: bold;
+        font-size: 1em;
         font-family: var(--font-alegraya);
     }
 
@@ -22,7 +23,6 @@
         width: 50px;
         height: 100%;
         color: #fff;
-        padding: 0.8rem;
         border-radius: 50px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -40,5 +40,9 @@
         input[type=text] {
            width: 100%;
         }
+    }
+
+    @media screen and (max-width: 620px) {
+        font-size: 10px;
     }
 }
