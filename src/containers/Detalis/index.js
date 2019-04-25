@@ -46,7 +46,7 @@ class Detalis extends Component {
             output = (
                 <div className="detalis">
                     <div className="detalis_header" style={headerStyles}>
-                        <Icon clicked={this.props.history.goBack} icon={ faArrowCircleLeft }/>        
+                        <Icon clicked={() => this.props.history.push('/')} icon={ faArrowCircleLeft }/>        
                     </div>
                     <main className="detalis_main">
                         <div className="detalis_main_information">

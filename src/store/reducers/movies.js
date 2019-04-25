@@ -5,7 +5,8 @@ const initalState = {
     popular: null,
     nowPlaying: null,
     topRated: null,
-    loading: true
+    loading: true,
+    fetched: false
 }
 
 export default (state = initalState, action) => {
@@ -23,7 +24,8 @@ export default (state = initalState, action) => {
                 nowPlaying: now_playing,
                 topRated: top_rated,
                 popular, upcoming,
-                loading: false
+                loading: false,
+                fetched: true
             }
         
         default: return state;

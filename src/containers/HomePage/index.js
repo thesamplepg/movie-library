@@ -15,11 +15,16 @@ import TvShows from './TvShows';
 class HomePage extends PureComponent {
 
     state = {
-        slides: 7
+        slides: 7,
+        rerenders: 1
     }
 
-    componentWillMount() {
-        this.props.getMovies();
+    componentDidMount() {
+        if(!this.props.fetched) this.props.getMovies();
+        else {
+            //force reRender
+            this.setState({rerenders: this.state.rerenders + 1});
+        }
     }
 
     switchToTvs = async() => {
@@ -117,5 +122,6 @@ export default connect( state => ({
     genres: state.app.genres,
     configuration: state.app.configuration,
     isTypeMovies: state.app.isTypeMovies,
-    received: state.tvShows.received
+    received: state.tvShows.received,
+    fetched: state.movies.fetched
 }), dispaths )(HomePage);
