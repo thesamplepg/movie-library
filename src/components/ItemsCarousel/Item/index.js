@@ -10,10 +10,12 @@ const Item = (props) => {
 
     return (
         <Link className="swiper-slide" to={`detalis/${type}/${props.id}`}>
-            <img src={props.baseUrl + props.poster_path} alt="poster" />
-            <div className="item-rating">
-                <Icon icon={ faStar } />
-                {props.vote_average}
+            <div className="item_image-wrapper">
+                <img src={props.baseUrl + props.poster_path} alt="poster" />
+                <div className="item_image-wrapper_rating">
+                    <Icon icon={ faStar } />
+                    {props.vote_average}
+                </div>
             </div>
             <div className="item-title">
                 {props.original_title ? props.original_title : props.original_name}
